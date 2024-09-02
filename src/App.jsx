@@ -5,7 +5,7 @@ import ActiveCallDetail from "./components/ActiveCallDetail";
 import Button from "./components/base/Button";
 
 function App() {
-  const vapi = new Vapi("51b5385d-d80d-4ab8-a588-84b198769b6d");
+  const vapi = new Vapi("");
   const [isLoading, setIsLoading] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
   const [volumeLevel, setVolumeLevel] = useState(0);
@@ -29,7 +29,7 @@ function App() {
 
   const startFilling = async () => {
     setIsLoading(true);
-    vapi.start("41f30418-7eeb-4dd4-b5c5-b655fa515952");
+    vapi.start("");
     const eventSource = new EventSource('http://localhost:5000/stream');
     console.log(vapi)
     
